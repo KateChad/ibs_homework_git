@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fb5088-8f77-449d-aee0-f27efed53e7f" name="Changes" comment="" />
+    <list default="true" id="93fb5088-8f77-449d-aee0-f27efed53e7f" name="Changes" comment="Homework1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +34,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Kate Chadova/IBS/Git/ibs_homework_git/ibs_java_homework1"
+    "last_opened_file_path": "C:/Users/Kate Chadova/IdeaProjects/ibs_java_homework1"
   }
 }]]></component>
   <component name="RunManager">
@@ -60,7 +60,30 @@
       <option name="presentableId" value="Default" />
       <updated>1671133795663</updated>
     </task>
+    <task id="LOCAL-00001" summary="Homework1">
+      <created>1671272632625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671272632625</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Homework1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
