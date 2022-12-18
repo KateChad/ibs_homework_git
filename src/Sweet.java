@@ -13,7 +13,7 @@
     }
 
     public void infoSweet(){
-        System.out.println(name + " " + weight + " грамм " + price + " рублей " + parameter);
+        System.out.println(name + " " + weight + " РіСЂР°РјРј " + price + " СЂСѓР±Р»РµР№ " + parameter);
     }
 
 

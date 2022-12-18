@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Box implements Keepers{
     public Box() {
@@ -30,7 +31,7 @@ public class Box implements Keepers{
             double weigth = sweet.getWeight();
             sumWeigth += weigth;
         }
-        System.out.println("Âåñ êîðîáêè: " + sumWeigth + " ãðàìì");
+        System.out.println("Ð’ÐµÑ ÐºÐ¾Ñ€Ð¾Ð±ÐºÐ¸: " + sumWeigth + " Ð³Ñ€Ð°Ð¼Ð¼");
     }
 
     @Override
@@ -40,12 +41,12 @@ public class Box implements Keepers{
             double price = sweet.getPrice();
             sumPrice += price;
         }
-        System.out.println("Ñòîèìîñòü êîðîáêè: " + sumPrice + " ðóáëåé");
+        System.out.println("Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ ÐºÐ¾Ñ€Ð¾Ð±ÐºÐ¸: " + sumPrice + " Ñ€ÑƒÐ±Ð»ÐµÐ¹");
     }
 
     @Override
     public void info() {
-        System.out.println("Ñîäåðæàíèå êîðîáêè: ");
+        System.out.println("Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸Ðµ ÐºÐ¾Ñ€Ð¾Ð±ÐºÐ¸: ");
        for (Sweet sweet: boxArray) {
            sweet.infoSweet();
        }
@@ -53,17 +54,17 @@ public class Box implements Keepers{
 
     @Override
     public void optimizationWeight(double maxWeight) {
-        System.out.println("Ñîäåðæàíèå êîðîáêè ñ ó÷åòîì îãðàíè÷åíèÿ ïî âåñó " + maxWeight + " : ");
+        System.out.println("Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸Ðµ ÐºÐ¾Ñ€Ð¾Ð±ÐºÐ¸ Ñ ÑƒÑ‡ÐµÑ‚Ð¾Ð¼ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð²ÐµÑÐ° " + maxWeight + " : ");
         double sumWeigth = 0;
         for (Sweet sweet: boxArray) {
             double weigth = sweet.getWeight();
             sumWeigth += weigth;
         }
         int id = 0;
-        while (sumWeigth > maxWeight ) {
-            for (int i = 0; (i + 1) < boxArray.size(); i++) {
-                if (boxArray.get(i + 1).weight < boxArray.get(i).weight) {
-                    id = i+1;
+        while (sumWeigth > maxWeight && boxArray.size() != 1) {
+            for (int i = 1;  i < boxArray.size(); i++) {
+                if (boxArray.get(i - 1).weight >= boxArray.get(i).weight) {
+                    id = i;
                 }
             }
             sumWeigth -= boxArray.get(id).weight;
@@ -78,21 +79,22 @@ public class Box implements Keepers{
     }
     @Override
     public void optimizationPrice(double maxPrice) {
-        System.out.println("Ñîäåðæàíèå êîðîáêè ñ ó÷åòîì îãðàíè÷åíèÿ ïî ñòîèìîñòè " + maxPrice + " : ");
+        System.out.println("Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸Ðµ ÐºÐ¾Ñ€Ð¾Ð±ÐºÐ¸ Ñ ÑƒÑ‡ÐµÑ‚Ð¾Ð¼ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð¹ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚Ð¸ " + maxPrice + " : ");
         double sumPrice = 0;
         for (Sweet sweet: boxArray) {
             double price = sweet.getPrice();
             sumPrice += price;
         }
-        int id = 0;
-        while (sumPrice > maxPrice ) {
-            for (int i = 0; (i + 1) < boxArray.size(); i++) {
-                if (boxArray.get(i + 1).getPrice() < boxArray.get(i).getPrice()) {
-                    id = i+1;
+        int id1 = 0;
+        while (sumPrice > maxPrice && boxArray.size() != 1) {
+           for (int i = 1; i < boxArray.size(); i++) {
+                if (boxArray.get(i - 1).getPrice() >= boxArray.get(i).getPrice()) {
+                    id1 = i;
                 }
+
             }
-            sumPrice -= boxArray.get(id).price;
-            boxArray.remove(id);
+            sumPrice -= boxArray.get(id1).price;
+            boxArray.remove(id1);
 
         }
         for (Sweet sweet: boxArray) {
