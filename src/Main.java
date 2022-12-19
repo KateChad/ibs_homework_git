@@ -28,23 +28,22 @@ public class Main {
         Map<String,Integer> wordsMap = wordsArrayList.stream().collect(Collectors.toMap(e->e, e->1, Integer::sum));
         wordsMap.forEach((k, v) -> System.out.println(k + " - " + v + " ( " + (100*v/wordsArrayList.size()) + "% )"));
         int max = 0;
-        String rep = "";
+
 
         for (String word:
              wordsArrayList) {
             if (wordsMap.get(word)>max){
                 max = wordsMap.get(word);
-                rep = word;
             }
         }
         HashSet<String> maxwords = new HashSet<>();
         for (String word:wordsArrayList) {
-            if ((wordsMap.get(word) == max) && !(rep.equals(word))){
+            if (wordsMap.get(word) == max){
                 maxwords.add(word);
 
             }
         }
-        System.out.println("Maximum number of repetitions - " + max + " word - " + rep + " " + maxwords) ;
+        System.out.println("Maximum number of repetitions - " + max + " word - " +  maxwords) ;
 
 
 
