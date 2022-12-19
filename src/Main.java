@@ -37,14 +37,14 @@ public class Main {
                 rep = word;
             }
         }
-        String rep1 = "";
-        for (String word:
-                wordsArrayList) {
+        HashSet<String> maxwords = new HashSet<>();
+        for (String word:wordsArrayList) {
             if ((wordsMap.get(word) == max) && !(rep.equals(word))){
-                 rep1 = word;
+                maxwords.add(word);
+
             }
         }
-        System.out.println("Maximum number of repetitions - " + max + " word - " + rep + " " + rep1 );
+        System.out.println("Maximum number of repetitions - " + max + " word - " + rep + " " + maxwords) ;
 
 
 
