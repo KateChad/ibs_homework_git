@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fb5088-8f77-449d-aee0-f27efed53e7f" name="Changes" comment="Исправила кодировку">
+    <list default="true" id="93fb5088-8f77-449d-aee0-f27efed53e7f" name="Changes" comment="Исправила кодировку и поправила">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Box.java" afterDir="false" />
@@ -39,7 +39,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Kate Chadova/IdeaProjects/ibs_java2"
+    "last_opened_file_path": "C:/Users/Kate Chadova/IdeaProjects/ibs_java_homework1"
   }
 }]]></component>
   <component name="RunManager">
@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671302738327</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Исправила кодировку и поправила">
+      <created>1671361698269</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671361698269</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework1" />
     <MESSAGE value="Исправила кодировку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправила кодировку" />
+    <MESSAGE value="Исправила кодировку и поправила" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправила кодировку и поправила" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

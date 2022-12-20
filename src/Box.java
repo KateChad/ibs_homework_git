@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
 public class Box implements Keepers{
     public Box() {
@@ -55,22 +54,22 @@ public class Box implements Keepers{
     @Override
     public void optimizationWeight(double maxWeight) {
         System.out.println("Содержание коробки с учетом максимального веса " + maxWeight + " : ");
-        double sumWeigth = 0;
-        for (Sweet sweet: boxArray) {
-            double weigth = sweet.getWeight();
-            sumWeigth += weigth;
-        }
-        int id = 0;
-        while (sumWeigth > maxWeight && boxArray.size() != 1) {
-            for (int i = 1;  i < boxArray.size(); i++) {
-                if (boxArray.get(i - 1).weight >= boxArray.get(i).weight) {
-                    id = i;
-                }
+        Collections.sort(boxArray, new Comparator<Sweet>() {
+            public int compare(Sweet stock1, Sweet stock2) {
+                return ((Double)stock1.getWeight()).compareTo((Double) stock2.getWeight());
             }
-            sumWeigth -= boxArray.get(id).weight;
-            boxArray.remove(id);
+        });
+        double sumWeightInBox = 0;
+        ArrayList<Sweet> boxArrayWeight = new ArrayList<>();
+        ListIterator<Sweet> iteratorWeight = boxArray.listIterator(boxArray.size());
+        while (iteratorWeight.hasPrevious()) {
+            Sweet sweet = iteratorWeight.previous();
+            sumWeightInBox += sweet.getWeight();
+            if (sumWeightInBox<=maxWeight){
+                boxArrayWeight.add(sweet);}
 
         }
+        boxArray = boxArrayWeight;
         for (Sweet sweet: boxArray) {
             sweet.infoSweet();
         }
@@ -80,23 +79,22 @@ public class Box implements Keepers{
     @Override
     public void optimizationPrice(double maxPrice) {
         System.out.println("Содержание коробки с учетом максимальной стоимости " + maxPrice + " : ");
-        double sumPrice = 0;
-        for (Sweet sweet: boxArray) {
-            double price = sweet.getPrice();
-            sumPrice += price;
-        }
-        int id1 = 0;
-        while (sumPrice > maxPrice && boxArray.size() != 1) {
-           for (int i = 1; i < boxArray.size(); i++) {
-                if (boxArray.get(i - 1).getPrice() >= boxArray.get(i).getPrice()) {
-                    id1 = i;
-                }
-
+        Collections.sort(boxArray, new Comparator<Sweet>() {
+            public int compare(Sweet stock1, Sweet stock2) {
+                return ((Double)stock1.getPrice()).compareTo((Double) stock2.getPrice());
             }
-            sumPrice -= boxArray.get(id1).price;
-            boxArray.remove(id1);
+        });
+        double sumPriceInBox = 0;
+        ArrayList<Sweet> boxArrayPrice = new ArrayList<>();
+        ListIterator<Sweet> iterator = boxArray.listIterator(boxArray.size());
+        while (iterator.hasPrevious()) {
+           Sweet sweet = iterator.previous();
+           sumPriceInBox += sweet.getPrice();
+           if (sumPriceInBox<=maxPrice){
+           boxArrayPrice.add(sweet);}
 
         }
+        boxArray = boxArrayPrice;
         for (Sweet sweet: boxArray) {
             sweet.infoSweet();
         }
