@@ -14,9 +14,9 @@ public class Main {
 
          while (sc2.hasNextLine()){
              String line = sc2.nextLine();
-             String[] wordsArray = line.split("[ ()+-/_,]+");
+             String[] wordsArray = line.split("[^a-zA-z]+");
              for (String word: wordsArray) {
-                 wordsArrayList.add(word);
+                 wordsArrayList.add(word.toLowerCase());
              }
          }
         } catch (FileNotFoundException exception){
