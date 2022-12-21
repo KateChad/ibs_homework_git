@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d7c836-872b-4f9c-903f-68c0ea383eff" name="Changes" comment="Поправила отборку частовстречающихся значений2">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f8d7c836-872b-4f9c-903f-68c0ea383eff" name="Changes" comment="Учла верхний регистр и знаки припинанния">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +30,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Kate Chadova/IdeaProjects/ibs_java_homework1"
+    "last_opened_file_path": "C:/Users/Kate Chadova/IdeaProjects/ibs_java_homework1",
+    "settings.editor.selected.configurable": "Console"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,12 +57,24 @@
       <option name="project" value="LOCAL" />
       <updated>1671489132874</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Учла верхний регистр и знаки припинанния">
+      <created>1671611758026</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671611758026</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Поправила отборку частовстречающихся значений" />
     <MESSAGE value="Поправила отборку частовстречающихся значений2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправила отборку частовстречающихся значений2" />
+    <MESSAGE value="Учла верхний регистр и знаки припинанния" />
+    <option name="LAST_COMMIT_MESSAGE" value="Учла верхний регистр и знаки припинанния" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
