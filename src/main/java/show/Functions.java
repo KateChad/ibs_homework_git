@@ -19,7 +19,7 @@ public class Functions {
         System.out.println("Компания:");
         companyes.forEach(i -> System.out.printf("%s - %s%n", i.getName(), formatDate(i.getFounded())));
     }
-    //дописать вывод всх ценных бумаг (код - дата истечения - полное название организации владельца)
+
     public static void getListofSecurity(List<Company> companies){
         System.out.println("Все ценные бумаги:");
         List<Security> securities = companies.stream().map(Company::getSecurities).flatMap(Collection::stream)
